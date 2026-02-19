@@ -15,7 +15,7 @@ const Links = () => {
           key={link.name} 
           href={link.url} 
           className="link-btn"
-          /* target="_blank" removed to keep in browser on mobile */
+          target="_blank"
           style={{ textAlign: 'center' }}
           rel="noopener noreferrer"
         >
