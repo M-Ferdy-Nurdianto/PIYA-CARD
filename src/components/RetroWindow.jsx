@@ -4,21 +4,12 @@ const RetroWindow = ({ children }) => {
   return (
     <div className="content-inner">
       <div className="internal-marquee">
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-2">HELLO KITTY ♡ LOVE PIYAKK</div>
-        <div className="marquee-line line-1">HELLO KITTY ♡ LOVE PIYAKK</div>
+        {/* Duplicating text in each line for seamless 50% loop */}
+        {[...Array(15)].map((_, i) => (
+          <div key={i} className={`marquee-line line-${i % 2 === 0 ? '1' : '2'}`}>
+            HELLO KITTY ♡ LOVE PIYAKK &nbsp; HELLO KITTY ♡ LOVE PIYAKK
+          </div>
+        ))}
       </div>
       
       <div className="content-container">
