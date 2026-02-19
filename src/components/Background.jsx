@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Background = () => {
-  const text = "PIYA ♡ PIYA ♡ PIYA ♡ PIYA ♡ PIYA ♡ PIYA ♡ ";
+  const text = "HELLO KITTY ♡ PIPIYAKK ♡ CUTE ♡ ";
   
   return (
     <div className="marquee-container">

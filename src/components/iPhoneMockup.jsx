@@ -13,8 +13,8 @@ const iPhoneMockup = ({ children }) => {
         <div className="iphone-button power" />
         
         <div className="iphone-inner">
-          {/* Dynamic Island / Notch */}
-          <div className="iphone-island" />
+          {/* Dynamic Island / Notch - Removed as requested */}
+          {/* <div className="iphone-island" /> */}
           
           <div className="iphone-content">
             {children}
@@ -34,12 +34,12 @@ const iPhoneMockup = ({ children }) => {
           position: relative;
           width: 360px;
           height: 740px;
-          background: #869666; /* Rich Matcha Green */
+          background: #fbcfe8; /* Pink-200 */
           border-radius: 55px;
           padding: 12px;
           box-shadow: 0 50px 100px -20px rgba(0,0,0,0.3), 
                       0 30px 60px -30px rgba(0,0,0,0.4);
-          border: 4px solid #6d7a52; /* Muted bezel */
+          border: 4px solid #f9a8d4; /* Pink-300 */
           display: flex;
           align-items: center;
           justify-content: center;
@@ -48,12 +48,12 @@ const iPhoneMockup = ({ children }) => {
           position: relative;
           width: 100%;
           height: 100%;
-          background: #f0fdf4;
+          background: #fff1f2; /* Rose-50 */
           border-radius: 45px;
           overflow: hidden;
           background-image: 
-            radial-gradient(at 0% 0%, #dcfce7 0, transparent 50%), 
-            radial-gradient(at 100% 100%, #bbf7d0 0, transparent 50%);
+            radial-gradient(at 0% 0%, #ffe4e6 0, transparent 50%), 
+            radial-gradient(at 100% 100%, #fecdd3 0, transparent 50%);
         }
         .iphone-island {
           position: absolute;
@@ -70,13 +70,9 @@ const iPhoneMockup = ({ children }) => {
         .iphone-content {
           width: 100%;
           height: 100%;
-          overflow-y: auto;
+          overflow-y: hidden; /* Disable scrolling by default (Home fits), allow child to enable if needed */
           overflow-x: hidden;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        .iphone-content::-webkit-scrollbar {
-          display: none;
+          position: relative;
         }
         /* Buttons */
         .iphone-button {
